@@ -1,0 +1,62 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f6ff; /* Alteração para azul claro */
+        line-height: 1.6;
+    }
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center; /* Centraliza o conteúdo */
+    }
+    .header {
+        margin-bottom: 30px;
+    }
+    .header img {
+        max-width: 200px;
+        height: auto;
+    }
+    .token {
+        background-color: #e0eaf9; /* Alteração para azul claro */
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+        display: inline-block; /* Permite centralizar */
+    }
+    .signature {
+        margin-top: 50px;
+        margin-bottom: 20px; /* Adiciona margem inferior */
+        font-style: italic;
+        color: #666; /* Altera para um tom mais escuro */
+        text-align: center; /* Centraliza a assinatura */
+    }
+    p {
+        text-align: justify; /* Justifica os parágrafos */
+        margin: 0 10px; /* Adiciona margem aos parágrafos */
+    }
+</style>
+
+<div class="container">
+    <div class="header">
+        <img src="https://s3.us-west-1.wasabisys.com/igutpacientes/logos/igutpacientes.png" alt="Logo">
+    </div>
+    <h1>Token de Verificação de {{ tipo }}</h1>
+    <p>Prezado(a) Usuário(a), {{ username }}</p>
+    <p>Use o Token a seguir para confirmação de {{ tipo }}. Não compartilhe esse Token com outras pessoas. O Token é valido por 4 horas.</p>
+    <p>Seu token de confirmação é:</p>
+    <div class="token">
+        <strong>{{ confirmationCode }}</strong>
+    </div>
+    <p>Por favor, utilize este token para completar o processo de confirmação.</p>
+    <p>Obrigado!</p>
+    <div class="signature">
+        Atenciosamente,<br>
+        iGUT Pacientes
+    </div>
+</div>
